@@ -24,8 +24,5 @@ public/storage
 _ide_helper.php
 
 docker-compose.override.yml
-
-# Never copy Laravel's host-generated package/service manifests into the image.
-# They may reference dev-only providers (e.g. laravel/pail) that are omitted in production.
 bootstrap/cache/*.php
 !bootstrap/cache/.gitignore
