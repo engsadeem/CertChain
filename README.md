@@ -145,20 +145,4 @@ Certificates issued from either mode will appear in the same dashboard.
 
 ---
 
-## Useful Commands
-
-```bash
-docker compose ps
-docker compose logs -f
-docker compose logs -f app
-docker compose logs -f nginx
-docker compose logs -f mysql
-```
-
-Do not use:
-
-```bash
-docker compose down -v
-```
-
 unless you intentionally want to remove the persistent Docker volumes and database.
