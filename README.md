@@ -142,7 +142,3 @@ Native Laravel → 127.0.0.1:3307
 ```
 
 Certificates issued from either mode will appear in the same dashboard.
-
----
-
-unless you intentionally want to remove the persistent Docker volumes and database.
