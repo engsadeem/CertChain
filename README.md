@@ -2,6 +2,8 @@
 
 CertChain supports two run modes while using the **same MySQL database and shared certificate storage**.
 
+The required `.env` file is provided separately with the project team.
+
 ## Requirements
 
 ### Docker Mode
@@ -24,36 +26,9 @@ Docker Compose
 
 ---
 
-## Environment
-
-Create `.env` in the project root.
-
-For Native Laravel:
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3307
-DB_DATABASE=certchain
-DB_USERNAME=certchain_user
-DB_PASSWORD=YOUR_PASSWORD
-```
-
-Blockchain configuration:
-
-```env
-ETH_RPC_URL=
-ETH_CONTRACT_ADDRESS=
-ETH_PRIVATE_KEY=
-```
-
-> Never commit `.env` or private keys to GitHub.
-
----
-
 # Option 1 — Full Docker
 
-Build and start the complete project:
+Start the complete project:
 
 ```bash
 docker compose up -d --build
@@ -71,7 +46,7 @@ Open:
 http://localhost:8080
 ```
 
-Stop:
+Stop the project:
 
 ```bash
 docker compose down
@@ -81,7 +56,7 @@ docker compose down
 
 # Option 2 — Native Laravel
 
-Start only the shared MySQL database:
+Start the shared MySQL database:
 
 ```bash
 docker compose up -d mysql
@@ -100,13 +75,13 @@ Clear Laravel cache:
 php artisan optimize:clear
 ```
 
-Run migrations:
+Run migrations and seeders:
 
 ```bash
 php artisan migrate --seed
 ```
 
-Create the storage link if needed:
+Create the storage link:
 
 ```bash
 php artisan storage:link
@@ -134,11 +109,11 @@ http://127.0.0.1:8000
 
 ## Shared Database
 
-Both modes use the same database:
+Both modes use the same MySQL database:
 
 ```text
 Docker Laravel → mysql:3306
 Native Laravel → 127.0.0.1:3307
 ```
 
-Certificates issued from either mode will appear in the same dashboard.
+Certificates and proof records created from either mode will appear in the same dashboard.
