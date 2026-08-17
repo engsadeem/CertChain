@@ -1,0 +1,31 @@
+.git
+.gitattributes
+
+.env
+.env.*
+!.env.example
+
+node_modules
+vendor
+
+storage/logs/*
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/app/public/certificates/*
+storage/app/public/qrcodes/*
+
+public/build
+public/hot
+public/storage
+
+.phpunit.cache
+.phpunit.result.cache
+_ide_helper.php
+
+docker-compose.override.yml
+
+# Never copy Laravel's host-generated package/service manifests into the image.
+# They may reference dev-only providers (e.g. laravel/pail) that are omitted in production.
+bootstrap/cache/*.php
+!bootstrap/cache/.gitignore

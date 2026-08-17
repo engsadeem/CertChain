@@ -25,10 +25,19 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
-.env
+# Docker/local environment files
+.env.docker
+.env.docker.local
+docker-compose.override.yml
 .env.*
 !.env.example
-/vendor/
-/node_modules/
-storage/logs/*.log
-/public/storage
+vendor/
+node_modules/
+storage/app/backups/
+storage/app/public/certificates/*
+!storage/app/public/certificates/.gitignore
+storage/app/public/qrcodes/*
+!storage/app/public/qrcodes/.gitignore
+Dockerfile.bak
+.dockerignore.bak
+*.bak

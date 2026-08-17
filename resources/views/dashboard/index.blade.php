@@ -14,10 +14,10 @@
                         <circle cx="17" cy="18" r="2.5" />
                     </svg>
                 </div>
-                <span class="stat-delta delta-pos">+8.2%</span>
+                
             </div>
             <div class="stat-label">Total Certificates</div>
-            <div class="stat-value">12,847</div>
+            <div class="stat-value">{{ number_format($totalCertificates) }}</div>
         </div>
         <div class="stat-card">
             <div class="stat-top">
@@ -28,10 +28,10 @@
                         <path d="M9 12l2 2 4-4" />
                     </svg>
                 </div>
-                <span class="stat-delta delta-pos">+12.4%</span>
+                
             </div>
             <div class="stat-label">Verified</div>
-            <div class="stat-value">11,206</div>
+            <div class="stat-value">{{ number_format($verified) }}</div>
         </div>
         <div class="stat-card">
             <div class="stat-top">
@@ -42,10 +42,10 @@
                         <path d="M12 7v5l3 2" />
                     </svg>
                 </div>
-                <span class="stat-delta delta-neg">−3.1%</span>
+                
             </div>
             <div class="stat-label">Pending</div>
-            <div class="stat-value">184</div>
+            <div class="stat-value">{{ number_format($pending) }}</div>
         </div>
         <div class="stat-card">
             <div class="stat-top">
@@ -55,10 +55,10 @@
                         <path d="M21 7.5 12 12 3 7.5M12 12v9.5M21 7.5v9L12 21l-9-4.5v-9L12 3l9 4.5z" />
                     </svg>
                 </div>
-                <span class="stat-delta delta-pos">+8.0%</span>
+                
             </div>
             <div class="stat-label">Proof Records</div>
-            <div class="stat-value">12,663</div>
+            <div class="stat-value">{{ number_format($proofRecords) }}</div>
         </div>
     </div>
 
